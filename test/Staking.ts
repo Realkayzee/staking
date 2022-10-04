@@ -45,6 +45,8 @@ describe("Staking", function (){
 
             await token.transfer(staking.address, amountToSend)
             expect(await token.balanceOf(staking.address)).to.equal(amountToSend);
+            expect(await token.balanceOf(owner.address)).to.equal(amountToSend);
         })
+
     })
 })
